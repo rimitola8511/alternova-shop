@@ -1,0 +1,51 @@
+.drawer_container {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-bottom: 20px;
+  transition: 0.5s;
+
+  .drawer_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
+    margin: 20px;
+    flex-wrap: nowrap;
+    flex: 0;
+
+    .close_button {
+      font-size: 36px;
+      cursor: pointer;
+      flex: 1;
+    }
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  .drawer_content {
+    padding: 20px;
+
+    .drawer_empty_state {
+      text-align: center;
+    }
+  }
+
+  .drawer_total {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.show {
+  width: 20%;
+}

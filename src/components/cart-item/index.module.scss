@@ -1,0 +1,26 @@
+.cart_item {
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 10px;
+  padding: 5px;
+
+  img {
+    width: 60px;
+    height: auto;
+  }
+
+  .cart_item_description {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: 0;
+      font-size: 13px;
+    }
+  }
+}
