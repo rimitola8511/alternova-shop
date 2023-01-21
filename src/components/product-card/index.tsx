@@ -1,8 +1,9 @@
 import { useState } from "react";
-import useShoppingCart from "../../hooks/useShoppingCart";
 import { Product } from "../../services/entities";
 import { formatCurrency } from "../../utilities/helpers";
+import useShoppingCart from "../../hooks/useShoppingCart";
 import ShoppingCartButton from "../shopping-cart-button";
+import ProductImage from "../../assets/product.png";
 import styles from "./index.module.scss";
 
 type Properties = {
@@ -23,10 +24,7 @@ function ProductCard({ product }: Properties) {
   return (
     <div className={styles.card}>
       <div className={styles.card_header}>
-        <img
-          src={`https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg`}
-          alt={name}
-        />
+        <img src={ProductImage} alt={name} />
       </div>
 
       <div className={styles.card_body}>
@@ -39,14 +37,19 @@ function ProductCard({ product }: Properties) {
           <span
             className={`${styles.tag} ${stock === 0 ? "" : styles.tag_purple}`}
           >
-            {stock}
+            {`qty: ${stock}`}
           </span>
         </div>
       </div>
 
       <div className={styles.card_footer}>
         {show ? (
-          <button onClick={() => handleAddToCart(product)}>Add to cart</button>
+          <button
+            disabled={stock === 0}
+            onClick={() => handleAddToCart(product)}
+          >
+            Add to cart
+          </button>
         ) : (
           <ShoppingCartButton product={product} showButton={setShow} />
         )}
