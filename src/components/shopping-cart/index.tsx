@@ -1,4 +1,3 @@
-import { useState } from "react";
 import useShoppingCart from "../../hooks/useShoppingCart";
 import { Product } from "../../services/entities";
 import useDrawerStore from "../../stores/drawer";

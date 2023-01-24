@@ -1,20 +1,8 @@
-import { useEffect } from "react";
-import { getProducts } from "../../services/products";
-import useProductsStore from "../../stores/product";
+import useGetProducts from "../../hooks/useGetProducts";
 import ProductCard from "../product-card";
 import styles from "./index.module.scss";
 function ProductList() {
-  const setProducts = useProductsStore((state) => state.setProducts);
-  const products = useProductsStore((state) => state.products);
-
-  useEffect(() => {
-    const getProductsFromApi = async () => {
-      const productList = await getProducts();
-      setProducts(productList);
-    };
-
-    getProductsFromApi();
-  }, []);
+  const { products } = useGetProducts();
 
   return (
     <main className={styles.product__container}>
