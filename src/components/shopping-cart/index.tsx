@@ -6,7 +6,7 @@ import { downloadFile } from "../../utilities/helpers";
 import { CartItem } from "../cart-item";
 import style from "./index.module.scss";
 
-export function Drawer() {
+export function ShoppingCart() {
   const { cart } = useShoppingCart();
   const open = useDrawerStore((state) => state.open);
   const setOpen = useDrawerStore((state) => state.setOpen);

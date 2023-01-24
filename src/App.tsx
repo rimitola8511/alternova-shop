@@ -1,7 +1,7 @@
 import { ToastContainer } from "react-toastify";
 import { Navbar } from "./components/navbar";
 import ProductList from "./components/product-list";
-import { Drawer } from "./components/drawer";
+import { ShoppingCart } from "./components/shopping-cart";
 import { Container } from "./components/container";
 import { Head } from "./components/head";
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Drawer />
+      <ShoppingCart />
 
       <Container>
         <ProductList />
